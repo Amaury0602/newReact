@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
-import Flat from './flat';
-
 import '../../assets/stylesheets/application.scss';
+
+import FlatList from './flatList';
+
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class App extends Component {
 
   render() {
     return (
-      <Flat price={102} />
+      <FlatList />
     );
   }
 }
