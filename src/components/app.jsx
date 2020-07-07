@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import '../../assets/stylesheets/application.scss';
 
 import FlatList from './flatList';
+import GoogleMap from './map';
+
+
+import flats from '../data/flats';
 
 
 class App extends Component {
@@ -11,7 +15,9 @@ class App extends Component {
 
   render() {
     return (
-      <FlatList />
+      <div className="flat-list">
+        <FlatList allFlats={flats} />
+      </div>
     );
   }
 }

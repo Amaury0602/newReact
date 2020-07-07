@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Flat from './flat';
-import flats from '../data/flats';
 
 
 class FlatList extends Component {
@@ -11,15 +10,9 @@ class FlatList extends Component {
 
 
   render() {
-    return (
-
-    <div className="flat-list">
-      {flats.map((flat) => {
-        return (<Flat name={flat.name} price={flat.price} imageUrl={flat.imageUrl} />);
-      })}
-    </div>
-
-    );
+    return (this.props.allFlats.map((flat) => {
+      return (<Flat name={flat.name} price={flat.price} imageUrl={flat.imageUrl} />);
+    }));
   }
 }
 
