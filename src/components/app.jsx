@@ -11,7 +11,7 @@ class App extends Component {
 
   render() {
     return (
-      <Flat price={10} />
+      <Flat price={102} />
     );
   }
 }

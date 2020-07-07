@@ -8,7 +8,7 @@ class Flat extends Component {
 
   render() {
     return (
-      <h1 className={"card"}> {this.props.price} </h1>
+      <h1 className={"card-user"}> {this.props.price} </h1>
     );
   }
 }
