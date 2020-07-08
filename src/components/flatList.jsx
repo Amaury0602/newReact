@@ -6,13 +6,37 @@ import Flat from './flat';
 class FlatList extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      selectedFlatIndex: null
+    };
   }
 
+  selectFlat = (index) => {
+    console.log(index);
+    this.setState({
+      selectedFlatIndex: index
+    });
+  }
 
   render() {
-    return (this.props.allFlats.map((flat) => {
-      return (<Flat name={flat.name} price={flat.price} imageUrl={flat.imageUrl} />);
-    }));
+    return (
+      <div className="flat-list">
+        {this.props.allFlats.map((flat, index) => {
+          return (
+            <Flat
+              name={flat.name}
+              price={flat.price}
+              imageUrl={flat.imageUrl}
+              key={flat.imageUrl}
+              index={index}
+              selectedFlatIndex={this.state.selectedFlatIndex}
+              selectFlat={this.selectFlat}
+            />
+          );
+        })}
+      </div>
+    );
   }
 }
 

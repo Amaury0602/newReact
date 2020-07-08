@@ -15,8 +15,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="flat-list">
+      <div>
         <FlatList allFlats={flats} />
+        <div className="map-container">
+          <GoogleMap />
+        </div>
       </div>
     );
   }

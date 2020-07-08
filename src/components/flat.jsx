@@ -6,9 +6,13 @@ class Flat extends Component {
     super(props);
   }
 
+  handleClick = () => {
+    this.props.selectFlat(this.props.index);
+  }
+
   render() {
     return (
-      <div className="card" style={{ backgroundImage: `url(${this.props.imageUrl})`}}>
+      <div onClick={this.handleClick} className={`card ${this.props.index === this.props.selectedFlatIndex ? "active" : null}`} style={{ backgroundImage: `url(${this.props.imageUrl})`}} index={this.props.index} onClick={this.handleClick}>
         <div className="card-category"> {this.props.price} € </div>
         <div className="card-description">
           <h2> {this.props.name} </h2>
