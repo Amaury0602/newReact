@@ -13,7 +13,7 @@ class FlatList extends Component {
   }
 
   selectFlat = (index) => {
-    console.log(index);
+    this.props.changeMarker(index);
     this.setState({
       selectedFlatIndex: index
     });
